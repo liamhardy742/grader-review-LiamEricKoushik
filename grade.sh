@@ -24,17 +24,18 @@ javac ListExamples.java 2> compile-error.txt
 if [[ $? -ne 0 ]] 
     then
     echo "ListExamples.java failed compiling."
-    cat compile-error.txt
+    cat compile-error.txt #Liked
     exit
 fi
 
-pwd
+pwd #Liked
 
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java 2> test-compile-error.txt
+#Liked very descriptive file names
 if [[ $? -ne 0 ]] 
     then
     echo "Tests failed compiling."
-    cat test-compile-error.txt
+    cat test-compile-error.txt #Liked
     exit
 fi
 
@@ -52,12 +53,12 @@ echo $SUCCESSES "/" $NUMTESTS
 #echo `($ERRORS/$NUMTESTS)`
 
 
-#echo $ERRORS
-#if [[ $ERRORS -eq 0 ]]
+# echo $ERRORS
+# if [[ $ERRORS -eq 0 ]]
 #    then
 #    echo "100%"
 #    exit
-#else 
+# else                           
 #    echo "0%"
 #    exit
-#fi
+# fi
